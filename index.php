@@ -1,16 +1,12 @@
 <?php
-  include("templates/header.php");
+  include("templates/header.htm");    
   $action = 'index';
-  $disallow_paths = array('header', 'footer');
-  if (!empty($_GET['action'])) {
-    $tmp_action = basename($_GET['action']);
-    if (!in_array($tmp_action, $disallow_paths) && file_exists("templates/{$tmp_action}.php")) {
-      $action = $tmp_action;
-    } else {
-      $action = 'notfound';
-    }
-    include("templates/$action.php"); //allowed page
+  $disallowed_paths = array('header', 'footer'); 
+  if (!empty($_GET['action'])) { 
+      $tmp_action = basename($_GET['action']); 
+      if (!in_array($tmp_action, $disallowed_paths) && file_exists("templates/{$tmp_action}.htm")) 
+          $action = $tmp_action; 
   }
-  include("templates/$action.php"); //disallowed/unavailable page
-  include("templates/footer.php");
+  include("templates/$action.htm"); 
+  include("templates/footer.htm");
 ?>
