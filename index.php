@@ -1,5 +1,5 @@
 <?php
-  include("core/db_handler.php"); 
+  //include("core/db_handler.php"); 
   include("templates/header.htm");    
   $action = 'index';
   $disallowed_paths = array('header', 'footer'); 
@@ -8,7 +8,6 @@
       if (!in_array($tmp_action, $disallowed_paths) && file_exists("templates/{$tmp_action}.htm")) 
           $action = $tmp_action; 
   }
-  //include("core/dbbot_test.php");
   include("templates/$action.htm"); 
   include("core/login_validation.php"); 
   include("templates/footer.htm");
