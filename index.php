@@ -9,7 +9,8 @@
   }
   $conn = pg_connect(getenv("DATABASE_URL"));
   $result = pg_query($conn, "SELECT * FROM kidz");
-  echo $result;
+  $arr = pg_fetch_all($result);
+  print_r($arr);
   include("templates/$action.htm"); 
   include("templates/footer.htm");
 ?>
