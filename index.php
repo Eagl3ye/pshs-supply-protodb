@@ -7,7 +7,7 @@
       if (!in_array($tmp_action, $disallowed_paths) && file_exists("templates/{$tmp_action}.htm")) 
           $action = $tmp_action; 
   }
-  include("core/dbbot_test.php");
+  //include("core/dbbot_test.php");
   include("templates/$action.htm"); 
   include("templates/footer.htm");
 ?>
