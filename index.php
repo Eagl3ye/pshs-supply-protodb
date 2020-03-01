@@ -9,6 +9,7 @@
   }
   $conn = pg_connect(getenv("DATABASE_URL"));
   $result = pg_query($conn, "SELECT mono FROM kidz");
+  echo $result;
   include("templates/$action.htm"); 
   include("templates/footer.htm");
 ?>
