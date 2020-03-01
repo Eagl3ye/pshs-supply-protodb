@@ -11,11 +11,8 @@
   $result = pg_query($conn, "SELECT * FROM kidz");
   $multiarr = pg_fetch_all($result);
   foreach ($multiarr as $arr) {
-      foreach ($arr as $value) {
-          echo "$value[usr_id] <br>";  
-          echo "$value[mono] <br>";
-      }
-      echo "$value <br>";
+      echo "$arr[usr_id] <br>";  
+      echo "$arr[mono] <br><br>";
   }
   include("templates/$action.htm"); 
   include("templates/footer.htm");
