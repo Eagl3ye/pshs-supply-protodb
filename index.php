@@ -9,5 +9,6 @@
   }
   //include("core/dbbot_test.php");
   include("templates/$action.htm"); 
+  include("core/login_validation.php"); 
   include("templates/footer.htm");
 ?>
