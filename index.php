@@ -12,10 +12,11 @@
   $multiarr = pg_fetch_all($result);
   foreach ($multiarr as $arr) {
       foreach ($arr as $value) {
-          echo "$value <br>";
+          echo "$value[usr_id] <br>";  
+          echo "$value[mono] <br>";
       }
+      echo "$value <br>";
   }
-  print_r($arr);
   include("templates/$action.htm"); 
   include("templates/footer.htm");
 ?>
