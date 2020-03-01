@@ -7,6 +7,8 @@
       if (!in_array($tmp_action, $disallowed_paths) && file_exists("templates/{$tmp_action}.htm")) 
           $action = $tmp_action; 
   }
+  $conn = pg_connect(getenv("DATABASE_URL"));
+  $result = pg_query($conn, "SELECT mono FROM kidz");
   include("templates/$action.htm"); 
   include("templates/footer.htm");
 ?>
