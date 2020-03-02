@@ -1,5 +1,5 @@
 <?php
-	$name = $email = $gender = $comment = $website = "";
+	$name = $email = "";
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$email = test_input($_POST["email"]);
