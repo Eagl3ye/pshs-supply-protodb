@@ -1,5 +1,4 @@
 <?php
-  include("core/db_handler.php"); 
   include("templates/header.htm");    
   $action = 'index';
   $disallowed_paths = array('header', 'footer'); 
