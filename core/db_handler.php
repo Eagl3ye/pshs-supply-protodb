@@ -11,3 +11,4 @@
 	pg_query($conn, $sql);
 	pg_close($conn);
 ?>
+ 	
