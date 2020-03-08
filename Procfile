@@ -1,1 +1,1 @@
-worker1: php core/db_handler.php
+worker1: php index.php

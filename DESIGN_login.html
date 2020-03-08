@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+	<head>
+		<title>Supply Office WebApp Prtototype</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="custom.css" rel="stylesheet" type="text/css"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+		<style>
+			li {
+				list-style: none;
+			}
+		</style>
+	</head>
+	<body class="bg-dark">
+		<div class="container-fluid mx-auto">
+			<div class="row p-5"></div>
+			<div class="row">
+				<div class="col-12">
+					<div class="mx-auto col-12 col-sm-6 col-md-4 col-lg-3 p-3 bg-light">
+						<form name="gateway_loginform" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST" >
+							<li>
+								<input type="email" class="col-12 py-2 my-1" name="login_email" placeholder="E-mail Address" autocomplete="on" required/>
+							</li>
+							<li>
+								<input type="submit" class="btn btn-success col-12 py-1 my-1" name="gateway_login" value="LOG-IN" />
+							</li>
+							<li>
+								<input type="submit" class="btn btn-primary col-12 py-1 my-1" name="gateway_register" value="REGISTER"/>
+							</li>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+			<!--Bootstrap Dependencies-->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+	</body>
+</html>
