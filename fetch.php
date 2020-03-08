@@ -5,6 +5,6 @@
 		$query = "SELECT * FROM items"; 
 
 		$rs = pg_query($conn, $query) or die("Cannot execute query: $query\n");
-		echo string(pg_fetch_row($rs)[0]);
+		echo pg_fetch_row($rs)[0];
 	}
 ?>
